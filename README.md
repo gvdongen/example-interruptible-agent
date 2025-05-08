@@ -3,8 +3,8 @@
 A small example of an interruptible agent, that gets invoked via a chat session.
 
 Important files:
-- [`chat.py`](chat.py): The chat VO, which receives the user input and agent responses.
-- [`agent_session.py`](agent_session.py): The agent session VO, which manages executes the agent loop.
+- [`chat.py`](app/chat.py): The chat VO, which receives the user input and agent responses. It tracks ongoing agent sessions and cancels them on new user input.
+- [`agent_session.py`](app/agent_session.py): The agent session VO, which executes the agent loop.
 
 To run Restate:
 ```shell
