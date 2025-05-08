@@ -6,6 +6,11 @@ Important files:
 - [`chat.py`](app/chat.py): The chat VO, which receives the user input and agent responses. It tracks ongoing agent sessions and cancels them on new user input.
 - [`agent_session.py`](app/agent_session.py): The agent session VO, which executes the agent loop.
 
+Start the service:
+```shell
+uv run app/main.py
+```
+
 To run Restate:
 ```shell
 restate-server
