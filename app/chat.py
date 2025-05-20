@@ -53,11 +53,7 @@ async def process_user_message(ctx: restate.ObjectContext, req: ChatMessage):
                 success = await ctx.object_call(
                     incorporate_new_input,
                     key=ctx.key(),
-                    arg=AgentInput(
-                        message_history=[
-                            entry.content for entry in history.entries
-                        ]
-                    ),
+                    arg=req.content,
                 )
                 if success:
                     # If the new input was incorporated, we can return
