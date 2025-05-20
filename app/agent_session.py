@@ -74,6 +74,7 @@ async def incorporate_new_input(ctx: restate.ObjectSharedContext, req: str) -> b
 
 
 async def run_iteration_of_agent(ctx: restate.ObjectContext, input_items: AgentInput):
+    # Mock of an agent iteration
     # Randomly decide if the agent is done
     logger.info(f"Running iteration of agent for {ctx.key()} with input items: {input_items}")
     await ctx.sleep(timedelta(seconds=3))
