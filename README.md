@@ -20,8 +20,7 @@ Open the UI on http://localhost:9070 and register your deployment running at `ht
 
 Then, start a task:
 ```shell
-curl localhost:8080/ChatService/bob/process_user_message \
-  -H 'idempotent-key: 12345' \
+curl localhost:8080/ChatService/elle/process_user_message \
   --json '{
   "content": "do something",
   "role": "user"
@@ -31,8 +30,7 @@ curl localhost:8080/ChatService/bob/process_user_message \
 Then, start a new task and cancel the previous one:
 
 ```shell
-curl localhost:8080/ChatService/bob/process_user_message \
-  -H 'idempotent-key: 123456' \
+curl localhost:8080/ChatService/elle/process_user_message \
   --json '{
   "content": "do something else",
   "role": "user"

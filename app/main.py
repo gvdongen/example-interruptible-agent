@@ -3,7 +3,7 @@ import asyncio
 import restate
 
 from chat import chat_service
-from agent_session import agent_session
+from agent_session import agent, agent_session
 
 
 def main():
@@ -11,6 +11,7 @@ def main():
         services=[
             chat_service,
             agent_session,
+            agent,
         ]
     )
 
