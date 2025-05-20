@@ -35,7 +35,6 @@ async def process_user_message(ctx: restate.ObjectContext, req: ChatMessage):
     history.entries.append(req)
     ctx.set(CHAT_HISTORY, history)
 
-    # switch statement on mode
     match os.getenv("MODE", "INTERRUPT").upper():
         case "INTERRUPT":
             ongoing_agent_run = await ctx.get(ACTIVE_AGENT_INVOCATION_ID)
